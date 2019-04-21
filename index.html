@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Projet 6</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="contentGuide" class="row">
+            <div class="col-md-3">
+                <h3>Regles</h3>
+                <ul>
+                    <li>3 déplacements max par tour</li>
+                    <li>Vous pouvez passer votre tour avant les 3 déplacement</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h3>Déplacement</h3>
+
+                <ul>
+                    <li>Haut : touche z</li>
+                    <li>Droite : touche d</li>
+                    <li>Bas : touche s</li>
+                    <li>Gauche : touche q</li>
+                    <li>Passer son tour : x</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h3>Armes</h3>
+                <ul>
+                    <li>Drapeau : force + 5</li>
+                    <li>Vin : force + 10</li>
+                    <li>Sabre : force + 15</li>
+                    <li>Canon : force + 20</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h3>Mode combat</h3>
+                <ul>
+                    <li>attaquer : touche z</li>
+                    <li> se défendre : touche s</li>
+                    <li>Défendre réduit de 50% les dégats.</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row" id="affichageInfos">
+
+            <div>
+                <button class="btn btn-outline-primary" type="button" id="btnGuide">Voir le guide de jeu</button>
+            </div>
+            <div class="row">
+                <div id="infoP1" class="row">
+                    <img src="image/Mons11.png" alt="perso1" class="row-md-6" id="imgP1">
+                    <div class="col">
+                        <div id="lifeperso1" class="row-md-2"></div>
+                        <div id="armeperso1" class="row-md-2"></div>
+                    </div>
+                </div>
+
+                <div id="infoP2" class="row">
+                    <img src="image/perso2.png" alt="perso2" class="row-md-6" id="imgP2">
+                    <div class="col">
+                        <div id="lifeperso2" class="row-md-2"></div>
+                        <div id="armeperso2" class="row-md-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="infos"></div>
+        <div id="map"></div>
+
+        <div id="controls" class="row">
+
+            <div class="row-xs-4">
+                <button class="btn btn-outline-primary" type="button" id="btnLeft">Gauche</button>
+            </div>
+
+            <div id="upAndDown" class="col-xs-4">
+                <div>
+                    <button class="btn btn-outline-primary col" type="button" id="btnUp">Haut</button>
+                </div>
+                <div>
+                    <button class="btn btn-outline-primary col" type="button" id="btnDown">Bas</button>
+                </div>
+            </div>
+
+            <div class="row-xs-4">
+                <button class="btn btn-outline-primary" type="button" id="btnRight">Droite</button>
+            </div>
+
+            <div class="row-xs-4" id="controlFight">
+                <button class="btn btn-outline-primary" type="button" id="btnAttack">Attaque</button>
+                <button class="btn btn-outline-primary" type="button" id="btnDef">Defence</button>
+            </div>
+
+        </div>
+        <div>
+            <button class="btn btn-outline-primary" type="button" id="btnReload">Recommencer</button>
+        </div>
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/changeDom.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/Content.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/combat.js"></script>
+    <script src="js/editWeapon.js"></script>
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>
